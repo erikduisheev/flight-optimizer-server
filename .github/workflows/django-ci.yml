@@ -1,4 +1,4 @@
-name: Django CI
+name: Build Django CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build_django:
 
     runs-on: ubuntu-latest
     strategy:
@@ -27,8 +27,8 @@ jobs:
         pip install -r requirements.txt
 
 
-  docker:
-    needs: build
+  build_docker:
+    needs: build_django
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
