@@ -2,6 +2,6 @@
 
 set -o errexit
 
-python /optimizer/manage.py migrate
+python /app/manage.py migrate
 
 exec "$@"
