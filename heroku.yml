@@ -4,7 +4,7 @@ build:
     web: Dockerfile
 
 run:
-  web: gunicorn app.wsgi
+  web: gunicorn optimizer.wsgi
 
 release:
   image: web
