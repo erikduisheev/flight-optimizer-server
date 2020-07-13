@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'corsheaders',
     'flights',
+    'locations',
     'rest_framework',
 ]
 
