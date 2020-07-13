@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'corsheaders',
+    'flights',
+    'locations',
     'rest_framework',
 ]
 

@@ -1,4 +1,4 @@
-name: Build Django CI
+name: CI (Build Django and Docker Container)
 
 on:
   push:
