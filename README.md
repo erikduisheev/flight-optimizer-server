@@ -4,31 +4,32 @@
 
 `Flight-Optimizer` is a service that searches for the cheapest flights based on price per kilometer criteria.
 
-### Information about server-side
+### Information about Django server-side
 
-Server side is deployed to Heroku services: https://flight-optimizer-server.herokuapp.com/
+- Server side is deployed to **Heroku services**: https://flight-optimizer-server.herokuapp.com/
 
-Github actions were used as CI / CD for this project.  
+- **Github actions** were used as **CI / CD** for this project.  
 
-All build and deployment statuses of the server can be found [on project's Github Actions](https://github.com/erikduisheev/flight-optimizer-server/actions).
+- **All build and deployment statuses** of the server can be found [on project's Github Actions](https://github.com/erikduisheev/flight-optimizer-server/actions).
 
-### Information about CLI
+### Information about `flight-optimizer` python package
 
-Python package that provides CLI for searching these specific flights is published on PYPI: https://pypi.org/project/flight-optimizer/
+Python package that searches these specific flights (and also provides CLI for that):
+- Is published on **PYPI**: https://pypi.org/project/flight-optimizer/
 
-The source code of CLI package can be found [here](https://github.com/erikduisheev/flight-optimizer).
+- The source code of CLI package can be found [here](https://github.com/erikduisheev/flight-optimizer).
 
-Build status of CLI package is [here](https://github.com/erikduisheev/flight-optimizer/actions).
+- Build and publishment statuses of CLI package is [here](https://github.com/erikduisheev/flight-optimizer/actions).
 
 ### Information about client-side
 
-Front-end is deployed to the AWS Amplify services: https://deployment.dkbw81rcej2op.amplifyapp.com/
+Front-end is deployed to the **AWS Amplify** services: https://deployment.dkbw81rcej2op.amplifyapp.com/
 
-The source code of front-end can be found [here](https://github.com/erikduisheev/flight-optimizer-frontend)
+The source code of front-end can be found [here](https://github.com/erikduisheev/flight-optimizer-frontend).
 
 ### Credits
 
-`Flight-Optimizer` was developed by motivation from [B12 Team](https://www.b12.io/about)
+`Flight-Optimizer` was developed by inspiration from [B12 Team](https://www.b12.io/about).
 
 
 ## Environment variables
@@ -38,14 +39,14 @@ The source code of front-end can be found [here](https://github.com/erikduisheev
 | SECRET_KEY            | secret               | A secret key for a particular Django installation. |
 | DEBUG                 | true                 | Flag that turns on debug mode. `true` or `false`   |
 | DJANGO_SETTINGS_MODULE| optimizer.settings   | Name of the settings module                        |
-| ALLOWED_HOSTS         | *                    | List of allowed hosts, separated by comma(" " - white space)       |
+| ALLOWED_HOSTS         | *                    | List of allowed hosts, separated by white space " "      |
 | DATABASE_URL          | postgres://user:password@localhost:5432/db_name           | Database connection URL                          |
 
 ## Installation guide
 
 ### Running with docker
 
-Specify environment variables. Example is provided int the above section.
+Specify environment variables. Example is provided in the above section.
 
 Build and run the docker container, using next command: 
 ```
@@ -112,7 +113,7 @@ Possible response:
 }
 ```
 
-In the response there will be a list of destinations. If there is no flights to some destination, then `is_reachable` key will be false. Otherwise it will have additional parameters such as `airport`, `price`, `distance` and `price_per_km`. 
+In the response there will be a list of destinations. If there is no flights to some destination, then `is_reachable` key will be false. Otherwise it will have additional fields such as `airport`, `price`, `distance` and `price_per_km`. 
 
 
 #### 2) `locations` endpoint:
@@ -120,7 +121,7 @@ In the response there will be a list of destinations. If there is no flights to 
 ```
 GET /api/locations?city=par
 ```
-It returns all possible cities from user's input. This data is going to be used for suggesting to user possible cities based on his/her input.
+It returns all possible cities from user's input. This data is going to be used for suggesting to user some possible cities based on his/her input.
 
 Possible response:
 ```json
