@@ -7,7 +7,7 @@ dataclasses==0.6
 dj-database-url==0.5.0
 Django==3.0.8
 django-cors-headers==3.4.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 flight-optimizer==0.2.0
 gunicorn==20.0.4
 haversine==2.2.0
