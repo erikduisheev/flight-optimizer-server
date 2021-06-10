@@ -5,7 +5,7 @@ chardet==3.0.4
 click==7.1.2
 dataclasses==0.6
 dj-database-url==0.5.0
-Django==3.0.8
+Django==3.1.12
 django-cors-headers==3.4.0
 djangorestframework==3.11.0
 flight-optimizer==0.2.0
